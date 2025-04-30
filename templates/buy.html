@@ -33,7 +33,8 @@
                             <h5 class="card-title">{{ product.name }}</h5>
                             <p class="card-text">{{ product.description|safe }}</p>
                             <h4 class="mb-3">Price: Rs. {{ product.price }}</h4>
-                            <form method="post" action="#">
+                            <form  action="https://rc-epay.esewa.com.np/api/epay/main/v2/form" method="POST">
+                                {{form|safe}}
                                 <button type="submit" class="btn btn-success btn-sm">Buy Now</button>
                             </form>
                         </div>
